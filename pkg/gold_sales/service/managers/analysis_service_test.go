@@ -1,6 +1,7 @@
 package managers
 
 import (
+	"bufio"
 	"testing"
 	"time"
 
@@ -74,6 +75,26 @@ func compareResultWithExpected(t *testing.T, result, expected SpenderTotalsByRep
 			assert.Equal(t, result[expectedSpendMonth][monthlySpender].TotalSpend,
 				spendersMonthlySpend.TotalSpend, result[expectedSpendMonth][monthlySpender])
 		}
+	}
+}
+
+func TestReportProducesExpectedCSV(t *testing.T) {
+	analysis := analysisServiceForTests(multipleSpendersInTwoMonths())
+	report, err := analysis.TopSpenders(3, 6)
+	require.Nil(t, err, "unexpected error")
+	expectedLines := []string{
+		"Jul 2020,Spe,nd,5.10,",
+		"Jul 2020,Another,Spender,0.90,",
+		"Jun 2020,Spe,nd,55.00,",
+		"Jun 2020,Another,Spender,0.30,",
+	}
+	output := report.FormattedAsCSV()
+	scanOutput := bufio.NewScanner(output)
+
+	lineCount := 0
+	for scanOutput.Scan() {
+		assert.Equal(t, expectedLines[lineCount], scanOutput.Text())
+		lineCount = lineCount + 1
 	}
 }
 

@@ -34,10 +34,7 @@ func (ts AnalysisService) TopSpenders(
 		return nil, errors.Wrap(err, "failed to get payments from repository")
 	}
 
-	groupedSpends, err := groupTotalSpendsByMonth(payments)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to group the monthly spends")
-	}
+	groupedSpends := groupTotalSpendsByMonth(payments)
 
 	monthlyTopSpenders, err := monthlySpenders(groupedSpends, numberSpenders, numberMonths)
 	if err != nil {
@@ -80,7 +77,6 @@ func groupTotalSpendsByMonth(
 	payments []gold_sales.GoldPayment,
 ) (
 	map[gold_sales.ReportMonth]gold_sales.MonthlySpenders,
-	error,
 ) {
 
 	spendsBySpender := make(SpendsBySpender)
@@ -106,7 +102,7 @@ func groupTotalSpendsByMonth(
 		}
 	}
 
-	return monthlySpends, nil
+	return monthlySpends
 }
 
 // spenderTotalsByMonth collates the monthly spends for each Spender and builds

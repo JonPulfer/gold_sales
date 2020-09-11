@@ -22,9 +22,7 @@ func NewMockLedgerRepository(mockLedger MockLedger) *MockLedgerRepository {
 func (mlr MockLedgerRepository) FetchAll() ([]gold_sales.GoldPayment, error) {
 	goldTransactions := make([]gold_sales.GoldPayment, 0)
 	for _, spenderPayments := range mlr.ledger {
-		for _, payment := range spenderPayments {
-			goldTransactions = append(goldTransactions, payment)
-		}
+		goldTransactions = append(goldTransactions, spenderPayments...)
 	}
 	return goldTransactions, nil
 }

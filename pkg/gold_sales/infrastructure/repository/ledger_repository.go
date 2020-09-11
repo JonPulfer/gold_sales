@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales"
 )
 
 // LedgerRepository provides access to stored GoldTransactions.

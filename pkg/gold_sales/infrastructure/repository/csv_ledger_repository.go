@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales"
 )
 
 // CSVLedgerRepository uses a CSV file as a LedgerRepository for Gold Payments.

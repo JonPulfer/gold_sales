@@ -5,8 +5,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales"
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales/infrastructure/repository"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales/infrastructure/repository"
 )
 
 // AnalysisService performs the high level operations that the business

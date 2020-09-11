@@ -37,3 +37,19 @@ Usage of ./gold_sales_report:
   -numTopSpenders=3: Number of top spenders per month
   -outputFilename="output.csv": Output filename
 ```
+
+## 5 Packages I use frequently
+
+ * "github.com/pkg/errors"
+ * "github.com/stretchr/testify/assert" + "github.com/stretchr/testify/require" 
+ * "github.com/rs/zerolog/log"
+ * "github.com/namsral/flag"
+ * "github.com/opentracing/opentracing-go"
+
+## Some Tools I really appreciate
+
+* IDE (JetBrains ones) - years of working in Vim, emacs etc was fine until jumping between large code bases.
+* OS X - I prefer a computer environment to just work so that I can focus on working and not configuring/fixing
+* Miro or other web based white boarding tool
+* Slack or similar chat
+* Zoom, Meet or BlueJeans video conf tools with sharing etc.

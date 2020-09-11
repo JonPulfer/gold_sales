@@ -3,7 +3,7 @@ package repository
 import (
 	"testing"
 
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

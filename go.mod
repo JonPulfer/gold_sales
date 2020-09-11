@@ -1,4 +1,4 @@
-module github.com/JonPulfer/gold_sales_report
+module github.com/JonPulfer/gold_sales
 
 go 1.14
 

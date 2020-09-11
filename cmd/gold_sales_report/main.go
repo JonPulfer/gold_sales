@@ -7,8 +7,8 @@ import (
 	"github.com/namsral/flag"
 	"github.com/rs/zerolog/log"
 
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales/infrastructure/repository"
-	"github.com/JonPulfer/gold_sales_report/pkg/gold_sales/service/managers"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales/infrastructure/repository"
+	"github.com/JonPulfer/gold_sales/pkg/gold_sales/service/managers"
 )
 
 func main() {
